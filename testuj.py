@@ -7,8 +7,8 @@ from selenium.webdriver.support.ui import Select
 
 email= "tester@wsb.pl"
 gender = "male"
-name = "Marcin"
-surname = "Nowak"
+name = "Grzegorz"
+surname = "Wojnowski"
 password = "Qwertry123@@"
 birth_day = "2"
 birth_month = 'January '
