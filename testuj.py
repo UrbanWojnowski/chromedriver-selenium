@@ -7,12 +7,13 @@ from selenium.webdriver.support.ui import Select
 
 email= "tester@wsb.pl"
 gender = "male"
-name = "Grzegorz"
-surname = "Wojnowski"
+name = "Marcin"
+surname = "Nowak"
 password = "Qwertry123@@"
 birth_day = "2"
 birth_month = 'January '
 birth_year = '2000'
+adres = "356 Adams avenue"
 
 
 # Tworze klase WsbPlCheck dziedziczaca po
@@ -80,6 +81,8 @@ class APRegistration(unittest.TestCase):
         surname_fact = driver.find_element_by_xpath('//input[@name="lastname"]').get_attribute("value")
         print("W polu jest nazwisko: ", surname_fact)
         assert surname == surname_fact
+        # 11. Wpisz adres
+        driver.find_element_by_id("address1").send_keys(adres)
         time.sleep(3)
 
 # Uruchom test jesli uruchamiamy
